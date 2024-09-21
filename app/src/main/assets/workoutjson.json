@@ -1,0 +1,958 @@
+{
+  "0": [
+    "Band-Assisted Bench Press",
+    "Chest"
+  ],
+  "1": [
+    "Bar Dip",
+    "Chest"
+  ],
+  "2": [
+    "Bench Press",
+    "Chest"
+  ],
+  "3": [
+    "Bench Press Against Band",
+    "Chest"
+  ],
+  "4": [
+    "Board Press",
+    "Chest"
+  ],
+  "5": [
+    "Cable Chest Press",
+    "Chest"
+  ],
+  "6": [
+    "Close-Grip Bench Press",
+    "Chest"
+  ],
+  "7": [
+    "Close-Grip Feet-Up Bench Press",
+    "Chest"
+  ],
+  "8": [
+    "Decline Bench Press",
+    "Chest"
+  ],
+  "9": [
+    "Decline Push-Up",
+    "Chest"
+  ],
+  "10": [
+    "Dumbbell Chest Fly",
+    "Chest"
+  ],
+  "11": [
+    "Dumbbell Chest Press",
+    "Chest"
+  ],
+  "12": [
+    "Dumbbell Decline Chest Press",
+    "Chest"
+  ],
+  "13": [
+    "Dumbbell Floor Press",
+    "Chest"
+  ],
+  "14": [
+    "Dumbbell Pullover",
+    "Chest"
+  ],
+  "15": [
+    "Feet-Up Bench Press",
+    "Chest"
+  ],
+  "16": [
+    "Floor Press",
+    "Chest"
+  ],
+  "17": [
+    "Incline Bench Press",
+    "Chest"
+  ],
+  "18": [
+    "Incline Dumbbell Press",
+    "Chest"
+  ],
+  "19": [
+    "Incline Push-Up",
+    "Chest"
+  ],
+  "20": [
+    "Kettlebell Floor Press",
+    "Chest"
+  ],
+  "21": [
+    "Kneeling Incline Push-Up",
+    "Chest"
+  ],
+  "22": [
+    "Kneeling Push-Up",
+    "Chest"
+  ],
+  "23": [
+    "Machine Chest Fly",
+    "Chest"
+  ],
+  "24": [
+    "Machine Chest Press",
+    "Chest"
+  ],
+  "25": [
+    "Pec Deck",
+    "Chest"
+  ],
+  "26": [
+    "Pin Bench Press",
+    "Chest"
+  ],
+  "27": [
+    "Push-Up",
+    "Chest"
+  ],
+  "28": [
+    "Push-Up Against Wall",
+    "Chest"
+  ],
+  "29": [
+    "Push-Ups With Feet in Rings",
+    "Chest"
+  ],
+  "30": [
+    "Resistance Band Chest Fly",
+    "Chest"
+  ],
+  "31": [
+    "Smith Machine Bench Press",
+    "Chest"
+  ],
+  "32": [
+    "Smith Machine Incline Bench Press",
+    "Chest"
+  ],
+  "33": [
+    "Standing Cable Chest Fly",
+    "Chest"
+  ],
+  "34": [
+    "Standing Resistance Band Chest Fly",
+    "Chest"
+  ],
+  "35": [
+    "Band External Shoulder Rotation",
+    "Shoulder"
+  ],
+  "36": [
+    "Band Internal Shoulder Rotation",
+    "Shoulder"
+  ],
+  "37": [
+    "Band Pull-Apart",
+    "Shoulder"
+  ],
+  "38": [
+    "Barbell Front Raise",
+    "Shoulder"
+  ],
+  "39": [
+    "Barbell Rear Delt Row",
+    "Shoulder"
+  ],
+  "40": [
+    "Barbell Upright Row",
+    "Shoulder"
+  ],
+  "41": [
+    "Behind the Neck Press",
+    "Shoulder"
+  ],
+  "42": [
+    "Cable Lateral Raise",
+    "Shoulder"
+  ],
+  "43": [
+    "Cable Rear Delt Row",
+    "Shoulder"
+  ],
+  "44": [
+    "Dumbbell Front Raise",
+    "Shoulder"
+  ],
+  "45": [
+    "Dumbbell Horizontal Internal Shoulder Rotation",
+    "Shoulder"
+  ],
+  "46": [
+    "Dumbbell Horizontal External Shoulder Rotation",
+    "Shoulder"
+  ],
+  "47": [
+    "Dumbbell Lateral Raise",
+    "Shoulder"
+  ],
+  "48": [
+    "Dumbbell Rear Delt Row",
+    "Shoulder"
+  ],
+  "49": [
+    "Dumbbell Shoulder Press",
+    "Shoulder"
+  ],
+  "50": [
+    "Face Pull",
+    "Shoulder"
+  ],
+  "51": [
+    "Front Hold",
+    "Shoulder"
+  ],
+  "52": [
+    "Lying Dumbbell External Shoulder Rotation",
+    "Shoulder"
+  ],
+  "53": [
+    "Lying Dumbbell Internal Shoulder Rotation",
+    "Shoulder"
+  ],
+  "54": [
+    "Machine Lateral Raise",
+    "Shoulder"
+  ],
+  "55": [
+    "Machine Shoulder Press",
+    "Shoulder"
+  ],
+  "56": [
+    "Monkey Row",
+    "Shoulder"
+  ],
+  "57": [
+    "Overhead Press",
+    "Shoulder"
+  ],
+  "58": [
+    "Plate Front Raise",
+    "Shoulder"
+  ],
+  "59": [
+    "Power Jerk",
+    "Shoulder"
+  ],
+  "60": [
+    "Push Press",
+    "Shoulder"
+  ],
+  "61": [
+    "Reverse Cable Flyes",
+    "Shoulder"
+  ],
+  "62": [
+    "Reverse Dumbbell Flyes",
+    "Shoulder"
+  ],
+  "63": [
+    "Reverse Machine Fly",
+    "Shoulder"
+  ],
+  "64": [
+    "Seated Dumbbell Shoulder Press",
+    "Shoulder"
+  ],
+  "65": [
+    "Seated Barbell Overhead Press",
+    "Shoulder"
+  ],
+  "66": [
+    "Seated Smith Machine Shoulder Press",
+    "Shoulder"
+  ],
+  "67": [
+    "Snatch Grip Behind the Neck Press",
+    "Shoulder"
+  ],
+  "68": [
+    "Squat Jerk",
+    "Shoulder"
+  ],
+  "69": [
+    "Split Jerk",
+    "Shoulder"
+  ],
+  "70": [
+    "Barbell Curl",
+    "Biceps"
+  ],
+  "71": [
+    "Barbell Preacher Curl",
+    "Biceps"
+  ],
+  "72": [
+    "Bodyweight Curl",
+    "Biceps"
+  ],
+  "73": [
+    "Cable Curl With Bar",
+    "Biceps"
+  ],
+  "74": [
+    "Cable Curl With Rope",
+    "Biceps"
+  ],
+  "75": [
+    "Concentration Curl",
+    "Biceps"
+  ],
+  "76": [
+    "Dumbbell Curl",
+    "Biceps"
+  ],
+  "77": [
+    "Dumbbell Preacher Curl",
+    "Biceps"
+  ],
+  "78": [
+    "Hammer Curl",
+    "Biceps"
+  ],
+  "79": [
+    "Incline Dumbbell Curl",
+    "Biceps"
+  ],
+  "80": [
+    "Machine Bicep Curl",
+    "Biceps"
+  ],
+  "81": [
+    "Spider Curl",
+    "Biceps"
+  ],
+  "82": [
+    "Barbell Standing Triceps Extension",
+    "Triceps"
+  ],
+  "83": [
+    "Barbell Lying Triceps Extension",
+    "Triceps"
+  ],
+  "84": [
+    "Bench Dip",
+    "Triceps"
+  ],
+  "85": [
+    "Close-Grip Push-Up",
+    "Triceps"
+  ],
+  "86": [
+    "Dumbbell Lying Triceps Extension",
+    "Triceps"
+  ],
+  "87": [
+    "Dumbbell Standing Triceps Extension",
+    "Triceps"
+  ],
+  "88": [
+    "Overhead Cable Triceps Extension",
+    "Triceps"
+  ],
+  "89": [
+    "Tricep Bodyweight Extension",
+    "Triceps"
+  ],
+  "90": [
+    "Tricep Pushdown With Bar",
+    "Triceps"
+  ],
+  "91": [
+    "Tricep Pushdown With Rope",
+    "Triceps"
+  ],
+  "92": [
+    "Air Squat",
+    "Quads"
+  ],
+  "93": [
+    "Barbell Hack Squat",
+    "Quads"
+  ],
+  "94": [
+    "Barbell Lunge",
+    "Quads"
+  ],
+  "95": [
+    "Barbell Walking Lunge",
+    "Quads"
+  ],
+  "96": [
+    "Belt Squat",
+    "Quads"
+  ],
+  "97": [
+    "Body Weight Lunge",
+    "Quads"
+  ],
+  "98": [
+    "Bodyweight Leg Curl",
+    "Hamstrings"
+  ],
+  "99": [
+    "Box Squat",
+    "Quads"
+  ],
+  "100": [
+    "Bulgarian Split Squat",
+    "Quads"
+  ],
+  "101": [
+    "Chair Squat",
+    "Quads"
+  ],
+  "102": [
+    "Dumbbell Lunge",
+    "Quads"
+  ],
+  "103": [
+    "Dumbbell Squat",
+    "Quads"
+  ],
+  "104": [
+    "Front Squat",
+    "Quads"
+  ],
+  "105": [
+    "Goblet Squat",
+    "Quads"
+  ],
+  "106": [
+    "Hack Squat Machine",
+    "Quads"
+  ],
+  "107": [
+    "Half Air Squat",
+    "Quads"
+  ],
+  "108": [
+    "Hip Adduction Machine",
+    "Quads"
+  ],
+  "109": [
+    "Jumping Lunge",
+    "Quads"
+  ],
+  "110": [
+    "Landmine Hack Squat",
+    "Quads"
+  ],
+  "111": [
+    "Landmine Squat",
+    "Quads"
+  ],
+  "112": [
+    "Leg Curl On Ball",
+    "Hamstrings"
+  ],
+  "113": [
+    "Leg Extension",
+    "Quads"
+  ],
+  "114": [
+    "Leg Press",
+    "Quads"
+  ],
+  "115": [
+    "Lying Leg Curl",
+    "Hamstrings"
+  ],
+  "116": [
+    "Nordic Hamstring Eccentric",
+    "Hamstrings"
+  ],
+  "119": [
+    "Romanian Deadlift",
+    "Glutes"
+  ],
+  "120": [
+    "Safety Bar Squat",
+    "Quads"
+  ],
+  "122": [
+    "Shallow Body Weight Lunge",
+    "Quads"
+  ],
+  "123": [
+    "Side Lunges (Bodyweight)",
+    "Quads"
+  ],
+  "124": [
+    "Smith Machine Squat",
+    "Quads"
+  ],
+  "125": [
+    "Squat",
+    "Quads"
+  ],
+  "126": [
+    "Step Up",
+    "Glutes"
+  ],
+  "127": [
+    "Zercher Squat",
+    "Quads"
+  ],
+  "128": [
+    "Assisted Chin-Up",
+    "Back"
+  ],
+  "129": [
+    "Assisted Pull-Up",
+    "Back"
+  ],
+  "130": [
+    "Back Extension",
+    "Back"
+  ],
+  "131": [
+    "Banded Muscle-Up",
+    "Back"
+  ],
+  "132": [
+    "Barbell Row",
+    "Back"
+  ],
+  "133": [
+    "Barbell Shrug",
+    "Traps"
+  ],
+  "135": [
+    "Block Snatch",
+    "Back"
+  ],
+  "136": [
+    "Cable Close Grip Seated Row",
+    "Back"
+  ],
+  "137": [
+    "Cable Wide Grip Seated Row",
+    "Back"
+  ],
+  "138": [
+    "Chin-Up",
+    "Back"
+  ],
+  "139": [
+    "Clean",
+    "Back"
+  ],
+  "140": [
+    "Clean and Jerk",
+    "Back"
+  ],
+  "141": [
+    "Deadlift",
+    "Back"
+  ],
+  "142": [
+    "Deficit Deadlift",
+    "Back"
+  ],
+  "143": [
+    "Dumbbell Deadlift",
+    "Back"
+  ],
+  "144": [
+    "Dumbbell Row",
+    "Back"
+  ],
+  "145": [
+    "Dumbbell Shrug",
+    "Traps"
+  ],
+  "146": [
+    "Floor Back Extension",
+    "Back"
+  ],
+  "147": [
+    "Good Morning",
+    "Back"
+  ],
+  "148": [
+    "Hang Clean",
+    "Back"
+  ],
+  "149": [
+    "Hang Power Clean",
+    "Back"
+  ],
+  "150": [
+    "Hang Power Snatch",
+    "Back"
+  ],
+  "151": [
+    "Hang Snatch",
+    "Back"
+  ],
+  "152": [
+    "Inverted Row",
+    "Back"
+  ],
+  "153": [
+    "Inverted Row with Underhand Grip",
+    "Back"
+  ],
+  "154": [
+    "Jefferson Curl",
+    "Back"
+  ],
+  "155": [
+    "Jumping Muscle-Up",
+    "Back"
+  ],
+  "156": [
+    "Kettlebell Swing",
+    "Back"
+  ],
+  "157": [
+    "Lat Pulldown With Pronated Grip",
+    "Lats"
+  ],
+  "158": [
+    "Lat Pulldown With Close Grip",
+    "Lats"
+  ],
+  "159": [
+    "Muscle-Up (Bar)",
+    "Back"
+  ],
+  "160": [
+    "Muscle-Up (Rings)",
+    "Back"
+  ],
+  "161": [
+    "One-Handed Cable Row",
+    "Back"
+  ],
+  "162": [
+    "One-Handed Lat Pulldown",
+    "Lats"
+  ],
+  "163": [
+    "Pause Deadlift",
+    "Back"
+  ],
+  "164": [
+    "Pendlay Row",
+    "Back"
+  ],
+  "165": [
+    "Power Clean",
+    "Back"
+  ],
+  "166": [
+    "Power Snatch",
+    "Back"
+  ],
+  "167": [
+    "Pull-Up",
+    "Back"
+  ],
+  "168": [
+    "Pull-Up With a Neutral Grip",
+    "Back"
+  ],
+  "169": [
+    "Rack Pull",
+    "Back"
+  ],
+  "170": [
+    "Ring Pull-Up",
+    "Back"
+  ],
+  "171": [
+    "Ring Row",
+    "Back"
+  ],
+  "172": [
+    "Seal Row",
+    "Back"
+  ],
+  "173": [
+    "Seated Machine Row",
+    "Back"
+  ],
+  "174": [
+    "Snatch",
+    "Back"
+  ],
+  "175": [
+    "Snatch Grip Deadlift",
+    "Back"
+  ],
+  "176": [
+    "Stiff-Legged Deadlift",
+    "Back"
+  ],
+  "177": [
+    "Straight Arm Lat Pulldown",
+    "Lats"
+  ],
+  "178": [
+    "Sumo Deadlift",
+    "Back"
+  ],
+  "179": [
+    "T-Bar Row",
+    "Back"
+  ],
+  "180": [
+    "Trap Bar Deadlift With High Handles",
+    "Back"
+  ],
+  "181": [
+    "Trap Bar Deadlift With Low Handles",
+    "Back"
+  ],
+  "182": [
+    "Bent Over Barbell Rows",
+    "Back"
+  ],
+  "183": [
+    "Banded Side Kicks",
+    "Glutes"
+  ],
+  "184": [
+    "Cable Pull Through",
+    "Glutes"
+  ],
+  "185": [
+    "Clamshells",
+    "Glutes"
+  ],
+  "186": [
+    "Dumbbell Romanian Deadlift",
+    "Glutes"
+  ],
+  "187": [
+    "Dumbbell Frog Pumps",
+    "Glutes"
+  ],
+  "188": [
+    "Fire Hydrants",
+    "Glutes"
+  ],
+  "189": [
+    "Frog Pumps",
+    "Glutes"
+  ],
+  "190": [
+    "Glute Bridge",
+    "Glutes"
+  ],
+  "191": [
+    "Hip Abduction Against Band",
+    "Glutes"
+  ],
+  "192": [
+    "Hip Abduction Machine",
+    "Glutes"
+  ],
+  "193": [
+    "Hip Thrust",
+    "Glutes"
+  ],
+  "194": [
+    "Hip Thrust Machine",
+    "Glutes"
+  ],
+  "195": [
+    "Hip Thrust With Band Around Knees",
+    "Glutes"
+  ],
+  "196": [
+    "Lateral Walk With Band",
+    "Glutes"
+  ],
+  "197": [
+    "Machine Glute Kickbacks",
+    "Glutes"
+  ],
+  "198": [
+    "One-Legged Glute Bridge",
+    "Glutes"
+  ],
+  "199": [
+    "One-Legged Hip Thrust",
+    "Glutes"
+  ],
+  "200": [
+    "Reverse Hyperextension",
+    "Glutes"
+  ],
+  "201": [
+    "Romanian Deadlift",
+    "Glutes"
+  ],
+  "203": [
+    "Standing Glute Kickback in Machine",
+    "Glutes"
+  ],
+  "204": [
+    "Step Up",
+    "Glutes"
+  ],
+  "205": [
+    "Ball Slams",
+    "Abs"
+  ],
+  "206": [
+    "Cable Crunch",
+    "Abs"
+  ],
+  "207": [
+    "Crunch",
+    "Abs"
+  ],
+  "208": [
+    "Dead Bug",
+    "Abs"
+  ],
+  "209": [
+    "Hanging Knee Raise",
+    "Abs"
+  ],
+  "210": [
+    "Hanging Leg Raise",
+    "Abs"
+  ],
+  "211": [
+    "Hanging Sit-Up",
+    "Abs"
+  ],
+  "212": [
+    "High to Low Wood Chop with Band",
+    "Abs"
+  ],
+  "213": [
+    "Horizontal Wood Chop with Band",
+    "Abs"
+  ],
+  "214": [
+    "Kneeling Ab Wheel Roll-Out",
+    "Abs"
+  ],
+  "215": [
+    "Kneeling Plank",
+    "Abs"
+  ],
+  "216": [
+    "Kneeling Side Plank",
+    "Abs"
+  ],
+  "217": [
+    "Lying Leg Raise",
+    "Abs"
+  ],
+  "218": [
+    "Lying Windshield Wiper",
+    "Abs"
+  ],
+  "219": [
+    "Lying Windshield Wiper with Bent Knees",
+    "Abs"
+  ],
+  "220": [
+    "Machine Crunch",
+    "Abs"
+  ],
+  "221": [
+    "Mountain Climbers",
+    "Abs"
+  ],
+  "222": [
+    "Oblique Crunch",
+    "Abs"
+  ],
+  "223": [
+    "Oblique Sit-Up",
+    "Abs"
+  ],
+  "224": [
+    "Plank",
+    "Abs"
+  ],
+  "225": [
+    "Plank with Leg Lifts",
+    "Abs"
+  ],
+  "226": [
+    "Side Plank",
+    "Abs"
+  ],
+  "227": [
+    "Sit-Up",
+    "Abs"
+  ],
+  "228": [
+    "Barbell Standing Calf Raise",
+    "Calves"
+  ],
+  "229": [
+    "Eccentric Heel Drop",
+    "Calves"
+  ],
+  "230": [
+    "Heel Raise",
+    "Calves"
+  ],
+  "231": [
+    "Seated Calf Raise",
+    "Calves"
+  ],
+  "232": [
+    "Standing Calf Raise",
+    "Calves"
+  ],
+  "233": [
+    "Barbell Wrist Curl",
+    "Forearms"
+  ],
+  "234": [
+    "Barbell Wrist Curl Behind the Back",
+    "Forearms"
+  ],
+  "235": [
+    "Bar Hang",
+    "Forearms"
+  ],
+  "236": [
+    "Dumbbell Wrist Curl",
+    "Forearms"
+  ],
+  "237": [
+    "Farmers Walk",
+    "Forearms"
+  ],
+  "238": [
+    "Fat Bar Deadlift",
+    "Forearms"
+  ],
+  "239": [
+    "Gripper",
+    "Forearms"
+  ],
+  "240": [
+    "One-Handed Bar Hang",
+    "Forearms"
+  ],
+  "241": [
+    "Plate Pinch",
+    "Forearms"
+  ],
+  "242": [
+    "Plate Wrist Curl",
+    "Forearms"
+  ],
+  "243": [
+    "Towel Pull-Up",
+    "Forearms"
+  ]
+}

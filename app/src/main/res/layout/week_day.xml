@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100sp"
+    android:orientation="vertical"
+
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:text="SUN"
+        android:paddingTop="5sp"
+        android:textSize="12sp"
+        android:tag="day"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:text="19"
+        android:tag="date"
+        android:padding="5sp"
+        android:paddingVertical="2sp"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:padding="5sp"
+    android:background="#FF151515"
+    android:layout_marginHorizontal="5sp"
+    android:paddingHorizontal="10sp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:id="@+id/TV_EXERCISE_LIST_NAME"
+        android:textSize="20dp"
+        android:paddingVertical="20sp"
+        android:paddingHorizontal="10sp"
+        android:text=""
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/TV_EXERCISE_LIST_ID"
+        android:gravity="right"
+        android:paddingHorizontal="20sp"
+        android:textColor="#232323"
+        android:text=""
+        android:paddingVertical="5sp"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

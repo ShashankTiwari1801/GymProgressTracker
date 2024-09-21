@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#121212"
+    android:layout_height="match_parent"
+    tools:context=".AnalysisActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="30sp"
+                android:text="ANALYSIS"
+                android:textColor="@color/light_blue_600"
+                android:paddingTop="20sp"
+                android:paddingHorizontal="20sp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Overall Analysis By Day"
+                android:gravity="center"
+                android:paddingVertical="2sp"
+                android:textColor="#FFFFFF"
+                android:padding="10sp"
+                android:layout_marginTop="50sp"
+                android:layout_height="wrap_content"/>
+            <com.github.mikephil.charting.charts.LineChart
+                android:layout_width="match_parent"
+                android:id="@+id/LC_TONNAGE"
+                android:layout_height="200sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Total Tonnage"
+                android:gravity="center"
+                android:paddingVertical="2sp"
+                android:textColor="#5E35B1"
+                android:padding="10sp"
+                android:layout_height="wrap_content"/>
+            <com.github.mikephil.charting.charts.LineChart
+                android:layout_width="match_parent"
+                android:id="@+id/LC_CALORIES"
+                android:layout_height="200sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Calories Burned By Day"
+                android:gravity="center"
+                android:paddingVertical="2sp"
+                android:textColor="#F4511E"
+                android:padding="10sp"
+                android:layout_height="wrap_content"/>
+
+            <!-- PROGRESS BARS HERE-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/LL_PROGRESS_CONTAINER"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Analysis By Exercise"
+                android:gravity="center"
+                android:paddingVertical="2sp"
+                android:layout_marginTop="50sp"
+                android:padding="10sp"
+                android:textColor="#FFFFFF"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:popupBackground="@drawable/gradient"
+                android:background="@color/white"
+                android:layout_margin="10sp"
+                android:id="@+id/SPINNER"
+                android:paddingVertical="10sp"
+                android:layout_height="wrap_content"/>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/LLContents"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:layout_width="match_parent"
+                        android:id="@+id/LC_WEIGHT_REP"
+                        android:layout_height="200sp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Weight Lifted By Set"
+                        android:gravity="center"
+                        android:paddingVertical="2sp"
+                        android:textColor="@color/yellow_grad"
+                        android:layout_height="wrap_content"/>
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:layout_width="match_parent"
+                        android:id="@+id/LC_STRENGTH_EFFICENCY"
+                        android:layout_height="200sp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Stringth Efficiency By Day"
+                        android:gravity="center"
+                        android:paddingVertical="2sp"
+                        android:textColor="@color/blue_grad"
+                        android:layout_height="wrap_content"/>
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:layout_width="match_parent"
+                        android:id="@+id/LC_PROGRESSIVE_OVERLOAD"
+                        android:layout_height="200sp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Progressive Overlaod By Day"
+                        android:gravity="center"
+                        android:paddingVertical="2sp"
+                        android:textColor="@color/green_grad"
+                        android:layout_height="wrap_content"/>
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:layout_width="match_parent"
+                        android:id="@+id/LC_EXERCISE_VOLUME"
+                        android:layout_height="200sp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Exercise Volume By Day"
+                        android:gravity="center"
+                        android:paddingVertical="2sp"
+                        android:layout_marginBottom="50sp"
+                        android:textColor="@color/red_grad"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

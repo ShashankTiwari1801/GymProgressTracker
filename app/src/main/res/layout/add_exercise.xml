@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:padding="18dp"
+    android:gravity="center_horizontal"
+    android:layout_height="70sp">
+    <ImageView
+        android:layout_width="50sp"
+        android:padding="5sp"
+        android:src="@drawable/add_circle"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Add exercise"
+        android:textSize="20sp"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent"/>
+</LinearLayout>

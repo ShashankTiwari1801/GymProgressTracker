@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80sp"
+    android:rowCount="1"
+    android:background="@drawable/card"
+    android:columnCount="3"
+    android:paddingHorizontal="5sp"
+    android:layout_marginVertical="5sp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="75sp"
+        android:src="@drawable/biceps"
+        android:padding="10sp"
+        android:layout_gravity="center_vertical"
+        android:layout_height="75sp"/>
+    <TextView
+        android:text="PLACEHOLDER"
+        android:layout_columnWeight="25"
+        android:layout_rowWeight="1"
+        android:gravity="center_vertical"
+        />
+    <ImageView
+        android:layout_width="25sp"
+        android:layout_columnWeight="1"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/close_white"
+        android:layout_height="25sp"/>
+</GridLayout>
