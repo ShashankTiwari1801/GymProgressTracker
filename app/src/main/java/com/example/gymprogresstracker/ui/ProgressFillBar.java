@@ -18,12 +18,14 @@ public class ProgressFillBar {
     String muscle = "";
     Context context;
     LinearLayout parent;
-    public ProgressFillBar(Context context, LinearLayout parent){
+
+    public ProgressFillBar(Context context, LinearLayout parent) {
         this.context = context;
         this.parent = parent;
         load();
     }
-    public void load(){
+
+    public void load() {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
         RLBar = (RelativeLayout) layoutInflater.inflate(R.layout.progressbar, parent, false);
         RLBar.post(new Runnable() {
@@ -35,24 +37,27 @@ public class ProgressFillBar {
         TVProgress = (TextView) RLBar.getChildAt(0);
         TVText = (TextView) RLBar.getChildAt(1);
     }
-    public RelativeLayout getRoot(){
+
+    public RelativeLayout getRoot() {
         return RLBar;
     }
-    public void setMuscle(String muscle){
+
+    public void setMuscle(String muscle) {
         this.muscle = muscle;
         setProgress(0.05f);
     }
-    public void setProgress(float percentage){
+
+    public void setProgress(float percentage) {
         RLBar.post(new Runnable() {
             @Override
             public void run() {
-                float progressWidth = W  * percentage;
+                float progressWidth = W * percentage;
                 //TVProgress.setWidth((int)(progressWidth));
                 RelativeLayout.LayoutParams lllp = (RelativeLayout.LayoutParams) TVProgress.getLayoutParams();
-                lllp.width = (int)progressWidth;
-                Log.e("EEEEEEEEEEEÊ", String.valueOf(progressWidth));
+                lllp.width = (int) progressWidth;
+                //Log.e("EEEEEEEEEEEÊ", String.valueOf(progressWidth));
                 TVProgress.setLayoutParams(lllp);
-                TVText.setText(muscle + " " + ((percentage*10000)/100) + "%");
+                TVText.setText(muscle + " " + ((percentage * 10000) / 100) + "%");
             }
         });
         // percentage is in a fraction < 1 | ex. 43% = 0.43x

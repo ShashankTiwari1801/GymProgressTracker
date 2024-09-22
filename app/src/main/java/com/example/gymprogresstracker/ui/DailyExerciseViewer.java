@@ -12,25 +12,30 @@ public class DailyExerciseViewer {
     Context context;
     ScrollView SVExerciseViewer;
     LinearLayout LLContents;
-    public DailyExerciseViewer(Context context, ScrollView SVExerciseViewer){
+
+    public DailyExerciseViewer(Context context, ScrollView SVExerciseViewer) {
         this.context = context;
         this.SVExerciseViewer = SVExerciseViewer;
         load();
     }
-    public void load(){
+
+    public void load() {
         LLContents = (LinearLayout) SVExerciseViewer.getChildAt(0);
     }
 
-    public LinearLayout getRoot(){
+    public LinearLayout getRoot() {
         return LLContents;
     }
-    public void addExerciseViewerCard(ExerciseViewerCard exerciseViewerCard){
+
+    public void addExerciseViewerCard(ExerciseViewerCard exerciseViewerCard) {
         LLContents.addView(exerciseViewerCard.getRootView());
     }
-    public void removeExerciseViewerCard(ExerciseViewerCard exerciseViewerCard){
+
+    public void removeExerciseViewerCard(ExerciseViewerCard exerciseViewerCard) {
         LLContents.removeView(exerciseViewerCard.getRootView());
     }
-    public void clear(){
+
+    public void clear() {
         LLContents.removeAllViews();
     }
 }

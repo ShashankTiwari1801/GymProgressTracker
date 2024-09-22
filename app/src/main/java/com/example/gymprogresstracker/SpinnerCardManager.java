@@ -2,16 +2,12 @@ package com.example.gymprogresstracker;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.util.Log;
-import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
-import com.example.gymprogresstracker.analysis.WorkoutAnalyzer;
 import com.example.gymprogresstracker.ui.SpinnerCard;
 import com.example.gymprogresstracker.util.ExerciseDirectoryManager;
 
-import java.nio.file.WatchService;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -25,7 +24,8 @@ public class WeightTrackerActivity extends AppCompatActivity {
     int timeOfDay = 0;
     String selectedColor = "#0EDF12";
     DatabaseManager databaseManager;
-    public void INIT(){
+
+    public void INIT() {
         TV_MORNING = findViewById(R.id.TV_MORNING);
         TV_NIGHT = findViewById(R.id.TV_NIGHT);
         ET_WEIGHT_INPUT = findViewById(R.id.ET_WEIGHT_INPUT);
@@ -52,44 +52,48 @@ public class WeightTrackerActivity extends AppCompatActivity {
         });
     }
 
-    public void onClickSwitch(int type){
-        if(type == 0){
+    public void onClickSwitch(int type) {
+        if (type == 0) {
             TV_NIGHT.setBackgroundColor(Color.parseColor("#00000000"));
             TV_MORNING.setBackgroundColor(Color.parseColor(selectedColor));
-        }
-        else{
+        } else {
             TV_MORNING.setBackgroundColor(Color.parseColor("#00000000"));
             TV_NIGHT.setBackgroundColor(Color.parseColor(selectedColor));
         }
         timeOfDay = type;
     }
-    public void onSubmit(){
+
+    public void onSubmit() {
         databaseManager.makeWeightTable();
         String date = getDate();
         float weight = Float.parseFloat(ET_WEIGHT_INPUT.getText().toString());
-        databaseManager.addWeightRecord(date,weight,timeOfDay);
+        databaseManager.addWeightRecord(date, weight, timeOfDay);
         inflateRecords();
     }
-    public String getDate(){
+
+    public String getDate() {
         LocalDate date = LocalDate.now();
         return date.toString();
     }
-    public void addCard(List<String> data){
+
+    public void addCard(List<String> data) {
         LayoutInflater inflater = LayoutInflater.from(this);
         View child = inflater.inflate(R.layout.weight_card, LL_WEIGHT_CONTENT, false);
         LL_WEIGHT_CONTENT.addView(child);
         LinearLayout parent = (LinearLayout) child;
-        ((TextView)parent.findViewById(R.id.TV_WEIGHT_MORNING)).setText(data.get(1) + " Kg");
-        ((TextView)parent.findViewById(R.id.TV_WEIGHT_NIGHT)).setText(data.get(2) + " Kg");
-        ((TextView)parent.findViewById(R.id.TV_CARD_DATE)).setText(data.get(0));
+        ((TextView) parent.findViewById(R.id.TV_WEIGHT_MORNING)).setText(data.get(1) + " Kg");
+        ((TextView) parent.findViewById(R.id.TV_WEIGHT_NIGHT)).setText(data.get(2) + " Kg");
+        ((TextView) parent.findViewById(R.id.TV_CARD_DATE)).setText(data.get(0));
     }
-    public void inflateRecords(){
+
+    public void inflateRecords() {
         LL_WEIGHT_CONTENT.removeAllViews();
         List<List<String>> records = databaseManager.getWeightTable();
-        for(List<String> temp : records){
+        for (List<String> temp : records) {
             addCard(temp);
         }
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -18,7 +18,6 @@ import com.example.gymprogresstracker.ui.AddExerciseButton;
 import com.example.gymprogresstracker.ui.AnalysisRowCard;
 import com.example.gymprogresstracker.ui.CalorieViewerCard;
 import com.example.gymprogresstracker.ui.DailyExerciseViewer;
-import com.example.gymprogresstracker.ui.WeekDay;
 import com.example.gymprogresstracker.ui.WeekRow;
 import com.example.gymprogresstracker.util.DayUtil;
 import com.example.gymprogresstracker.util.ExerciseDirectoryManager;

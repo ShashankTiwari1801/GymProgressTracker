@@ -1,16 +1,13 @@
 package com.example.gymprogresstracker;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.View;
 
-import com.example.gymprogresstracker.ui.DailyExerciseViewer;
 import com.example.gymprogresstracker.ui.WeekDay;
 import com.example.gymprogresstracker.ui.WeekRow;
 import com.example.gymprogresstracker.util.DayUtil;
 
 import java.time.LocalDate;
-import java.util.Locale;
 
 public class WeekRowManager {
     Context context;

@@ -4,13 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,8 +15,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.gymprogresstracker.analysis.CalorieData;
-import com.example.gymprogresstracker.analysis.WeeklyMuscleSet;
 import com.example.gymprogresstracker.analysis.WorkoutAnalyzer;
 import com.example.gymprogresstracker.ui.ProgressFillBar;
 import com.example.gymprogresstracker.ui.SpinnerCard;
@@ -86,7 +81,6 @@ public class AnalysisActivity extends AppCompatActivity {
     }
     public void loadProgressBars(){
         List<String> muscles = exerciseDirectoryManager.getMuscleList();
-        //WeeklyMuscleSet weeklyMuscleSet = new WeeklyMuscleSet(null);
         HashMap<String, Integer> muscleToWeekCount = workoutAnalyzer.getMuscleToWeekCount();
         for(String muscle: muscles){
             progressFillBarHashMap.put(muscle, new ProgressFillBar(context, LL_PROGRESS_CONTAINER));
@@ -94,9 +88,6 @@ public class AnalysisActivity extends AppCompatActivity {
             LL_PROGRESS_CONTAINER.addView(progressFillBarHashMap.get(muscle).getRoot());
             float progress = muscleToWeekCount.get(muscle)/ (float)WEEKLY_SET_MAX;
             progressFillBarHashMap.get(muscle).setProgress(progress);
-            Log.e("JSON MSCL", muscle);
-            Log.e("MAP MSCL", muscleToWeekCount.keySet().toString());
-            Log.e("TEST", muscleToWeekCount.get(muscle).toString());
         }
     }
     public void loadPermanentGraphs(){

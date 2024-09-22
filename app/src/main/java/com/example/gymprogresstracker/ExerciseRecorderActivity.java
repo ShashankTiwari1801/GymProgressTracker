@@ -2,13 +2,9 @@ package com.example.gymprogresstracker;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -19,7 +15,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.gymprogresstracker.ui.AddSetDialogCard;
-import com.example.gymprogresstracker.ui.ExerciseRecorderCard;
 import com.example.gymprogresstracker.ui.ExerciseRecorderHeader;
 import com.example.gymprogresstracker.ui.ExerciseSetRecorderList;
 import com.example.gymprogresstracker.ui.SetDetailCard;
@@ -27,18 +22,6 @@ import com.example.gymprogresstracker.util.DayUtil;
 import com.example.gymprogresstracker.util.ExerciseDirectoryManager;
 import com.example.gymprogresstracker.util.JSONHelper;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.file.DirectoryIteratorException;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 
 public class ExerciseRecorderActivity extends AppCompatActivity {

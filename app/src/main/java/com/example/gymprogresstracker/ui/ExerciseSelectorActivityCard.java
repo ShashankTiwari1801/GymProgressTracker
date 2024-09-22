@@ -18,49 +18,58 @@ public class ExerciseSelectorActivityCard {
     public String SELECTED_COLOR = "#00897B";
     public String DEFAULT_COLOR = "#FF151515";
     public int exerciseID = 0;
-    public ExerciseSelectorActivityCard(Context context, LinearLayout parent, boolean isTitle){
+
+    public ExerciseSelectorActivityCard(Context context, LinearLayout parent, boolean isTitle) {
         this.context = context;
         this.parent = parent;
         this.isTitle = isTitle;
         load();
     }
-    public void load(){
+
+    public void load() {
         LayoutInflater inflater = LayoutInflater.from(context);
         card = (LinearLayout) inflater.inflate(R.layout.exercise_list_card, parent, false);
 
         TVExerciseName = card.findViewById(R.id.TV_EXERCISE_LIST_NAME);
         TVExerciseID = card.findViewById(R.id.TV_EXERCISE_LIST_ID);
 
-        if(isTitle){
+        if (isTitle) {
             makeTitle();
         }
         //parent.addView(card);
     }
 
-    public void setExerciseName(String name){
+    public void setExerciseName(String name) {
         TVExerciseName.setText(name);
     }
-    public void setExerciseID(int id){
+
+    public void setExerciseID(int id) {
         this.exerciseID = id;
         TVExerciseID.setText("#" + String.valueOf(id));
     }
-    public LinearLayout getRoot(){
+
+    public LinearLayout getRoot() {
         return card;
     }
-    public void makeTitle(){
+
+    public void makeTitle() {
         card.setBackgroundColor(Color.parseColor("#ffffff"));
         TVExerciseName.setTextColor(Color.parseColor("#000000"));
     }
-    public void select(){
+
+    public void select() {
         card.setBackgroundColor(Color.parseColor(SELECTED_COLOR));
     }
-    public void deSelect(){
+
+    public void deSelect() {
         card.setBackgroundColor(Color.parseColor(DEFAULT_COLOR));
     }
-    public int getExerciseID(){
+
+    public int getExerciseID() {
         return exerciseID;
     }
-    public void setOnClickListener(View.OnClickListener onClickListener){
+
+    public void setOnClickListener(View.OnClickListener onClickListener) {
         card.setOnClickListener(onClickListener);
     }
 }

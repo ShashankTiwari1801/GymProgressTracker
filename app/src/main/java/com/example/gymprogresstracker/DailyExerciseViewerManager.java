@@ -8,7 +8,6 @@ import com.example.gymprogresstracker.ui.DailyExerciseViewer;
 import com.example.gymprogresstracker.ui.ExerciseViewerCard;
 import com.example.gymprogresstracker.util.Exercise;
 import com.example.gymprogresstracker.util.ExerciseDirectoryManager;
-import com.example.gymprogresstracker.util.ExerciseDirectoryManager;
 import com.example.gymprogresstracker.util.MuscleIconManager;
 
 import java.util.ArrayList;

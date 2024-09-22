@@ -41,46 +41,63 @@ public class WorkoutAnalyzer {
     CalorieData calorieData;
     WeeklyMuscleSet weeklyMuscleSet;
     ExerciseDirectoryManager exerciseDirectoryManager;
-    public WorkoutAnalyzer(Context context){
+
+    public WorkoutAnalyzer(Context context) {
         this.context = context;
         exerciseDirectoryManager = new ExerciseDirectoryManager(new JSONHelper(context));
         calorieData = new CalorieData(context);
         dailyTonnageCalculator = new DailyTonnageCalculator(getExerciseListByDate(), getDateList());
         weeklyMuscleSet = new WeeklyMuscleSet(getExerciseListByMuscle(), getDateList(), exerciseDirectoryManager);
     }
-    public void analyze(List<List<String>> data){
+
+    public void analyze(List<List<String>> data) {
         progressiveOverloadCalculator = new ProgressiveOverloadCalculator(data);
         strengthEfficiencyCalculator = new StrengthEfficiencyCalculator(data);
         setWiseData = new SetWiseData(data);
         exerciseVolumeCalculator = new ExerciseVolumeCalculator(data);
     }
-    public List<Float> getProgressiveOverLoadData(){
+
+    public List<Float> getProgressiveOverLoadData() {
         return progressiveOverloadCalculator.getResult();
     }
-    public List<Float> getStrengthEfficiencyData(){
+
+    public List<Float> getStrengthEfficiencyData() {
         return strengthEfficiencyCalculator.getStrengthEfficiency();
     }
-    public List<Float> getWeightList(){
+
+    public List<Float> getWeightList() {
         return setWiseData.getWeights();
     }
-    public List<Integer> getSetList(){
+
+    public List<Integer> getSetList() {
         return setWiseData.getSets();
     }
-    public List<Float> getVolumeList(){return exerciseVolumeCalculator.getVolume();}
-    public List<Float> getCalorieList(){return calorieData.getResult();}
-    public HashMap<String, List<List<String>>> getExerciseListByDate(){
+
+    public List<Float> getVolumeList() {
+        return exerciseVolumeCalculator.getVolume();
+    }
+
+    public List<Float> getCalorieList() {
+        return calorieData.getResult();
+    }
+
+    public HashMap<String, List<List<String>>> getExerciseListByDate() {
         return calorieData.getDateToRecords();
     }
-    public HashMap<String, List<List<String>>> getExerciseListByMuscle(){
+
+    public HashMap<String, List<List<String>>> getExerciseListByMuscle() {
         return calorieData.getMuscleToRecords();
     }
-    public List<String> getDateList(){
+
+    public List<String> getDateList() {
         return calorieData.getDateList();
     }
-    public List<Float> getDailyTonnage(){
+
+    public List<Float> getDailyTonnage() {
         return dailyTonnageCalculator.getRes();
     }
-    public HashMap<String, Integer> getMuscleToWeekCount(){
+
+    public HashMap<String, Integer> getMuscleToWeekCount() {
         return weeklyMuscleSet.getMuscleToWeekCount();
     }
 }
