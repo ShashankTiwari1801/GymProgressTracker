@@ -10,14 +10,14 @@ import android.widget.TextView;
 import com.example.gymprogresstracker.R;
 
 public class ExerciseSelectorActivityCard {
+    public String SELECTED_COLOR = "#00897B";
+    public String DEFAULT_COLOR = "#FF151515";
+    public int exerciseID = 0;
     Context context;
     LinearLayout card;
     TextView TVExerciseName, TVExerciseID;
     LinearLayout parent;
     boolean isTitle = false;
-    public String SELECTED_COLOR = "#00897B";
-    public String DEFAULT_COLOR = "#FF151515";
-    public int exerciseID = 0;
 
     public ExerciseSelectorActivityCard(Context context, LinearLayout parent, boolean isTitle) {
         this.context = context;
@@ -43,11 +43,6 @@ public class ExerciseSelectorActivityCard {
         TVExerciseName.setText(name);
     }
 
-    public void setExerciseID(int id) {
-        this.exerciseID = id;
-        TVExerciseID.setText("#" + String.valueOf(id));
-    }
-
     public LinearLayout getRoot() {
         return card;
     }
@@ -67,6 +62,11 @@ public class ExerciseSelectorActivityCard {
 
     public int getExerciseID() {
         return exerciseID;
+    }
+
+    public void setExerciseID(int id) {
+        this.exerciseID = id;
+        TVExerciseID.setText("#" + id);
     }
 
     public void setOnClickListener(View.OnClickListener onClickListener) {

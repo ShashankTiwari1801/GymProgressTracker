@@ -30,7 +30,7 @@ public class ExerciseRecorderCard {
         ((TextView) child.findViewById(R.id.TV_CARD_REPS)).setText(data.get(3));
         ((TextView) child.findViewById(R.id.TV_CARD_SET_ID)).setText("#" + data.get(1));
         ((TextView) child.findViewById(R.id.TV_CARD_CAL_VIEW)).setText(cals + " kcals");
-        TextView tvRemove = (TextView) child.findViewById(R.id.TV_CARD_REMOVE);
+        TextView tvRemove = child.findViewById(R.id.TV_CARD_REMOVE);
         tvRemove.setOnClickListener(removeOnClickListener);
     }
 }

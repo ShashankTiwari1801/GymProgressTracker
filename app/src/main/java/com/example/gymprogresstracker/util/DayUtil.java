@@ -7,22 +7,27 @@ public class DayUtil {
     LocalDate SELECTED_DAY;
     int SELECTED_DAY_ID;
     int TODAY_ID;
-    public DayUtil(){
+
+    public DayUtil() {
         TODAY = LocalDate.now();
         SELECTED_DAY = TODAY;
-        TODAY_ID = TODAY.getDayOfWeek().getValue()-1;
+        TODAY_ID = TODAY.getDayOfWeek().getValue() - 1;
         SELECTED_DAY_ID = TODAY_ID;
     }
-    public int getTodayDayID(){
+
+    public int getTodayDayID() {
         return TODAY_ID;
     }
-    public int getSelectedDayID(){
+
+    public int getSelectedDayID() {
         return SELECTED_DAY_ID;
     }
-    public void setSELECTED_DAY_ID(int id){
+
+    public void setSELECTED_DAY_ID(int id) {
         SELECTED_DAY_ID = id;
     }
-    public String getToday(){
+
+    public String getToday() {
         return TODAY.toString();
     }
 }

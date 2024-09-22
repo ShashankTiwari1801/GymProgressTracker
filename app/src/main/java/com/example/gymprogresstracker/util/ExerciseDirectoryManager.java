@@ -1,7 +1,5 @@
 package com.example.gymprogresstracker.util;
 
-import android.util.Log;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -55,16 +53,20 @@ public class ExerciseDirectoryManager {
         return Objects.requireNonNull(ExerciseMap.get(id))[1];
     }
 
-    public List<String> getIDList(){
+    public List<String> getIDList() {
         return IDList;
     }
-    public int getID(String exerciseName){
-        for(int ID: ExerciseMap.keySet()){
-            if(ExerciseMap.get(ID)[0].equals(exerciseName)){return  ID;}
+
+    public int getID(String exerciseName) {
+        for (int ID : ExerciseMap.keySet()) {
+            if (ExerciseMap.get(ID)[0].equals(exerciseName)) {
+                return ID;
+            }
         }
         return -1;
     }
-    public List<String> getMuscleList(){
+
+    public List<String> getMuscleList() {
         return new ArrayList<>(muscles);
     }
 }

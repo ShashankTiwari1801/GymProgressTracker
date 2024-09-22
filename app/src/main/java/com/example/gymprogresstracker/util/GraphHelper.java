@@ -5,7 +5,6 @@ import android.graphics.Color;
 
 import androidx.core.content.ContextCompat;
 
-import com.example.gymprogresstracker.R;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
@@ -17,17 +16,19 @@ import java.util.List;
 
 public class GraphHelper {
     Context context;
-    public GraphHelper(Context context){
+
+    public GraphHelper(Context context) {
         this.context = context;
     }
 
-    public LineData getLineData(List<Entry> data, int backgroundDrawable, int graphColor){
+    public LineData getLineData(List<Entry> data, int backgroundDrawable, int graphColor) {
         LineDataSet lineDataSet = new LineDataSet(data, "");
-        customizeLineDataSet(lineDataSet, backgroundDrawable,graphColor);
+        customizeLineDataSet(lineDataSet, backgroundDrawable, graphColor);
         LineData lineData = new LineData(lineDataSet);
         return lineData;
     }
-    public void customizeLineDataSet(LineDataSet lineDataSet, int backgroundDrawable, int graphColor){
+
+    public void customizeLineDataSet(LineDataSet lineDataSet, int backgroundDrawable, int graphColor) {
         lineDataSet.setDrawCircles(false);
         lineDataSet.setDrawFilled(true);
         lineDataSet.setColor(graphColor);
@@ -40,7 +41,8 @@ public class GraphHelper {
         lineDataSet.setFillDrawable(ContextCompat.getDrawable(context, backgroundDrawable));
         //lineDataSet.setFillDrawable(ContextCompat.getDrawable(context, R.drawable.gradient));
     }
-    public void customizeLineChart(LineChart lineChart){
+
+    public void customizeLineChart(LineChart lineChart) {
         YAxis yAxisL = lineChart.getAxisLeft();
         YAxis yAxisR = lineChart.getAxisRight();
         XAxis xAxisU = lineChart.getXAxis();

@@ -11,12 +11,14 @@ public class MuscleIconManager {
     Context context;
     HashMap<String, Integer> muscleToDrawableMap = new HashMap<>();
     ExerciseDirectoryManager exerciseDirectoryManager;
-    public MuscleIconManager(Context context){
+
+    public MuscleIconManager(Context context) {
         this.context = context;
         exerciseDirectoryManager = new ExerciseDirectoryManager(new JSONHelper(context));
         init();
     }
-    public void init(){
+
+    public void init() {
         muscleToDrawableMap.put("Chest", R.drawable.chest);
         muscleToDrawableMap.put("Biceps", R.drawable.biceps);
         muscleToDrawableMap.put("Triceps", R.drawable.triceps);
@@ -29,10 +31,13 @@ public class MuscleIconManager {
         muscleToDrawableMap.put("Traps", R.drawable.traps);
         muscleToDrawableMap.put("Back", R.drawable.back);
     }
-    public Integer getMuscleIcon(int ID){
+
+    public Integer getMuscleIcon(int ID) {
         String muscle = exerciseDirectoryManager.getMuscleGroup(ID);
         Log.e("FOUND MUSCLE", muscle);
-        if(!muscleToDrawableMap.containsKey(muscle)){return muscleToDrawableMap.get("Biceps");}
+        if (!muscleToDrawableMap.containsKey(muscle)) {
+            return muscleToDrawableMap.get("Biceps");
+        }
         return muscleToDrawableMap.get(muscle);
     }
 }

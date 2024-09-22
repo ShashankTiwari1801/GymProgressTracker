@@ -2,7 +2,6 @@ package com.example.gymprogresstracker.analysis;
 
 import android.content.Context;
 
-import com.example.gymprogresstracker.CalorieCalculator;
 import com.example.gymprogresstracker.util.ExerciseDirectoryManager;
 import com.example.gymprogresstracker.util.JSONHelper;
 

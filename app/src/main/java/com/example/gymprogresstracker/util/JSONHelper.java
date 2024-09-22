@@ -2,8 +2,6 @@ package com.example.gymprogresstracker.util;
 
 import android.content.Context;
 
-//import com.example.gymprogresstracker.JSONSorter;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -16,7 +14,11 @@ import java.util.Iterator;
 public class JSONHelper {
     Context context;
 
-    public JSONObject parseJSONFile(String fileName){
+    public JSONHelper(Context context) {
+        this.context = context;
+    }
+
+    public JSONObject parseJSONFile(String fileName) {
         JSONObject jsonObject;
 
         try {
@@ -37,8 +39,5 @@ public class JSONHelper {
         }
 
         return jsonObject;
-    }
-    public JSONHelper(Context context){
-        this.context = context;
     }
 }

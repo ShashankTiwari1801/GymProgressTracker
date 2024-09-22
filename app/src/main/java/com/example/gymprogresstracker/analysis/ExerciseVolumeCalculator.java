@@ -2,8 +2,6 @@ package com.example.gymprogresstracker.analysis;
 
 import android.util.Log;
 
-import com.example.gymprogresstracker.util.ExerciseDirectoryManager;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -38,18 +36,20 @@ public class ExerciseVolumeCalculator {
         }
         Log.e("e", dataMap.toString());
     }
-    public List<Float> getVolume(){
+
+    public List<Float> getVolume() {
         List<Float> res = new ArrayList<>();
-        for(String date: dateList){
+        for (String date : dateList) {
             float volume = 0f;
-            for(List<String> record: dataMap.get(date)){
+            for (List<String> record : dataMap.get(date)) {
                 volume += parseRecordToVolume(record);
             }
             res.add(volume);
         }
         return res;
     }
-    public float parseRecordToVolume(List<String> record){
+
+    public float parseRecordToVolume(List<String> record) {
         float weight = Float.parseFloat(record.get(2));
         float reps = Float.parseFloat(record.get(3));
         return weight * reps;

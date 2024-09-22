@@ -24,28 +24,36 @@ public class CalorieData {
     List<String> dateList = new ArrayList<>();
     List<Float> calorieResult = new ArrayList<>();
     HashMap<String, Float> result = new HashMap<>();
-    public CalorieData(Context context){
+
+    public CalorieData(Context context) {
         this.context = context;
         databaseManager = new DatabaseManager(context);
         calorieCalculator = new CalorieCalculator(context);
         exerciseDirectoryManager = new ExerciseDirectoryManager(new JSONHelper(context));
         load();
     }
-    public void load(){
+
+    public void load() {
         List<String> list = databaseManager.showTables();
         HashSet<String> dates = new HashSet<>();
-        for(String names: list){
+        for (String names : list) {
             String _id = names.substring(3);
-            if(_id.charAt(0)=='n'){continue;}
+            if (_id.charAt(0) == 'n') {
+                continue;
+            }
             //Log.e("e", _id);
             int id = Integer.parseInt(_id);
             String muscle = exerciseDirectoryManager.getMuscleGroup(id);
-            if(!muscleToRecords.containsKey(muscle)){muscleToRecords.put(muscle, new ArrayList<>());}
+            if (!muscleToRecords.containsKey(muscle)) {
+                muscleToRecords.put(muscle, new ArrayList<>());
+            }
             List<List<String>> records = databaseManager.getSetList(id);
-            for(List<String> temp: records){
+            for (List<String> temp : records) {
                 dates.add(temp.get(0));
                 muscleToRecords.get(muscle).add(temp);
-                if(!dateToRecords.containsKey(temp.get(0))){dateToRecords.put(temp.get(0), new ArrayList<>());}
+                if (!dateToRecords.containsKey(temp.get(0))) {
+                    dateToRecords.put(temp.get(0), new ArrayList<>());
+                }
                 dateToRecords.get(temp.get(0)).add(temp);
             }
         }
@@ -53,7 +61,8 @@ public class CalorieData {
         calculateResult();
         //Log.e("E", muscleToRecords.toString());
     }
-    public void sortDates(HashSet<String> dates){
+
+    public void sortDates(HashSet<String> dates) {
         dateList = new ArrayList<>(dates);
         dateList.sort(new Comparator<String>() {
             @Override
@@ -66,43 +75,64 @@ public class CalorieData {
                 int m2 = Integer.parseInt(b[1]);
                 int d1 = Integer.parseInt(a[2]);
                 int d2 = Integer.parseInt(b[2]);
-                if(y1 > y2){return 1;}
-                if(y2 > y1){return -1;}
+                if (y1 > y2) {
+                    return 1;
+                }
+                if (y2 > y1) {
+                    return -1;
+                }
 
-                if(m1 > m2){return 1;}
-                if(m2 > m1){return -1;}
+                if (m1 > m2) {
+                    return 1;
+                }
+                if (m2 > m1) {
+                    return -1;
+                }
 
-                if(d1 > d2){return 1;}
-                if(d2 > d1){return -1;}
+                if (d1 > d2) {
+                    return 1;
+                }
+                if (d2 > d1) {
+                    return -1;
+                }
 
                 return 0;
             }
         });
         Log.e("SORTED DATE", dateList.toString());
     }
-    public void calculateResult(){
-        for(String muscle: muscleToRecords.keySet()){
-            for(List<String> record : muscleToRecords.get(muscle)){
+
+    public void calculateResult() {
+        for (String muscle : muscleToRecords.keySet()) {
+            for (List<String> record : muscleToRecords.get(muscle)) {
                 String date = record.get(0);
                 int reps = Integer.parseInt(record.get(3));
                 float cal = calorieCalculator.getCalories(0f, reps, muscle);
-                if(!result.containsKey(date)){result.put(date, 0f);}
+                if (!result.containsKey(date)) {
+                    result.put(date, 0f);
+                }
                 result.put(date, result.get(date) + cal);
             }
         }
     }
-    public List<Float> getResult(){
+
+    public List<Float> getResult() {
         List<Float> res = new ArrayList<>();
-        for(String date: dateList){
+        for (String date : dateList) {
             res.add(result.get(date));
         }
         return res;
     }
-    public HashMap<String, List<List<String>>> getDateToRecords(){
-        return  dateToRecords;
+
+    public HashMap<String, List<List<String>>> getDateToRecords() {
+        return dateToRecords;
     }
-    public List<String> getDateList(){
+
+    public List<String> getDateList() {
         return dateList;
     }
-    public HashMap<String, List<List<String>>> getMuscleToRecords(){return muscleToRecords;}
+
+    public HashMap<String, List<List<String>>> getMuscleToRecords() {
+        return muscleToRecords;
+    }
 }

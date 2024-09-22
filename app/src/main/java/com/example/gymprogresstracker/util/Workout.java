@@ -5,7 +5,8 @@ public class Workout {
     int reps = 0;
     float weight = 0f;
     String date = "";
-    public Workout(Exercise exercise, int reps, float weight, String date){
+
+    public Workout(Exercise exercise, int reps, float weight, String date) {
         this.date = date;
         this.exercise = exercise;
         this.reps = reps;

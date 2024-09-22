@@ -7,11 +7,13 @@ import android.widget.LinearLayout;
 public class AddExerciseButton {
     Context context;
     LinearLayout LL_AddExButton;
-    public AddExerciseButton(Context context, LinearLayout LL_AddExButton){
+
+    public AddExerciseButton(Context context, LinearLayout LL_AddExButton) {
         this.context = context;
         this.LL_AddExButton = LL_AddExButton;
     }
-    public void setOnClickListener(View.OnClickListener onClickListener){
+
+    public void setOnClickListener(View.OnClickListener onClickListener) {
         LL_AddExButton.setOnClickListener(onClickListener);
     }
 }

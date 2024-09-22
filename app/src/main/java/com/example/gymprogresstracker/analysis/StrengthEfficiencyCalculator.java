@@ -1,13 +1,8 @@
 package com.example.gymprogresstracker.analysis;
 
-import android.content.Context;
-import android.util.Log;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-import kotlin.jvm.internal.markers.KMutableMap;
 
 public class StrengthEfficiencyCalculator {
     List<List<String>> data;
