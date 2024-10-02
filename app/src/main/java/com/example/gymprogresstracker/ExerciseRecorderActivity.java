@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -151,10 +152,19 @@ public class ExerciseRecorderActivity extends AppCompatActivity {
                 float weight = addSetDialogCard.getWeight();
                 int reps = addSetDialogCard.getReps();
                 databaseManager.addSetInExercise(id, date, setId, weight, reps);
+                removeKeyboard();
                 addSetDialogCard.deFocus();
                 initExerciseSetRecorderList();
             }
         };
+    }
+
+    public void removeKeyboard(){
+        View view = getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 
     @Override

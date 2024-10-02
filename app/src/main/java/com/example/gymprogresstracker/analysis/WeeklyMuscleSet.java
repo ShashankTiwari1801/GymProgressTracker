@@ -60,7 +60,7 @@ public class WeeklyMuscleSet {
                 }
             }
         }
-        Log.e("EEEEE", muscleToWeekCount.toString());
+        //Log.e("EEEEE", muscleToWeekCount.toString());
     }
 
     public boolean isWeekDay(String date) {

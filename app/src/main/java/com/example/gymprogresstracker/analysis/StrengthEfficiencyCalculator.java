@@ -14,7 +14,7 @@ public class StrengthEfficiencyCalculator {
         parseDataByDate();
     }
 
-    public List<Float> getStrengthEfficiency() {
+     public List<Float> getStrengthEfficiency() {
         List<Float> res = new ArrayList<>();
         parseDataByDate();
         for (String date : dateList) {
