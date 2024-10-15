@@ -11,4 +11,53 @@
     <color name="purple_grad">#FF5E35B1</color>
     <color name="red_grad">#FFD81B60</color>
     <color name="yellow_grad">#FFFDD835</color>
+
+
+    <!-- Row 1: Red -->
+    <color name="abs_card">#FF6F61</color> <!-- Muted Red -->
+    <color name="abs_card_complement">#FF3D3D</color> <!-- Vibrant Red -->
+
+    <color name="back_card">#E57373</color> <!-- Soft Muted Red -->
+    <color name="back_card_complement">#E53935</color> <!-- Vibrant Red -->
+
+    <!-- Row 2: Yellow -->
+    <color name="chest_card">#FFD54F</color> <!-- Muted Yellow -->
+    <color name="chest_card_complement">#FFC107</color> <!-- Vibrant Yellow -->
+
+    <color name="forearms_card">#FFEB3B</color> <!-- Soft Yellow -->
+    <color name="forearms_card_complement">#FFC107</color> <!-- Vibrant Yellow -->
+
+    <!-- Row 3: Orange -->
+    <color name="biceps_card">#FFB74D</color> <!-- Muted Orange -->
+    <color name="biceps_card_complement">#FF9800</color> <!-- Vibrant Orange -->
+
+    <color name="calves_card">#FFA726</color> <!-- Soft Orange -->
+    <color name="calves_card_complement">#FF9800</color> <!-- Vibrant Orange -->
+
+    <!-- Row 4: Green -->
+    <color name="glutes_card">#81C784</color> <!-- Soft Green -->
+    <color name="glutes_card_complement">#66BB6A</color> <!-- Vibrant Green -->
+
+    <color name="hamstrings_card">#66BB6A</color> <!-- Muted Green -->
+    <color name="hamstrings_card_complement">#4CAF50</color> <!-- Vibrant Green -->
+
+    <!-- Row 5: Blue -->
+    <color name="lats_card">#64B5F6</color> <!-- Soft Blue -->
+    <color name="lats_card_complement">#2196F3</color> <!-- Vibrant Blue -->
+
+    <color name="quads_card">#4FC3F7</color> <!-- Light Blue -->
+    <color name="quads_card_complement">#03A9F4</color> <!-- Vibrant Light Blue -->
+
+    <!-- Row 6: Indigo -->
+    <color name="shoulder_card">#7986CB</color> <!-- Muted Indigo -->
+    <color name="shoulder_card_complement">#3F51B5</color> <!-- Vibrant Indigo -->
+
+    <color name="traps_card">#5C6BC0</color> <!-- Soft Indigo -->
+    <color name="traps_card_complement">#3F51B5</color> <!-- Vibrant Indigo -->
+
+    <!-- Row 7: Violet -->
+    <color name="triceps_card">#BA68C8</color> <!-- Soft Violet -->
+    <color name="triceps_card_complement">#9C27B0</color> <!-- Vibrant Violet -->
+
+
 </resources>

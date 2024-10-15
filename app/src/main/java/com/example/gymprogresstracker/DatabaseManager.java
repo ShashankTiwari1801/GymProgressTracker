@@ -103,7 +103,7 @@ public class DatabaseManager {
     public List<Integer> getRecord(int id){
         List<Integer> res = new ArrayList<>();
         Cursor c = database.rawQuery("SELECT * FROM D"+id+";", null);
-        if(c.getCount()==0){return res;}
+        if(c.getCount()==0){c.close();return res;}
         c.moveToFirst();
         do{
             res.add(c.getInt(0));
@@ -162,7 +162,7 @@ public class DatabaseManager {
         String QRY = "SELECT SET_NO FROM EXC"+ex_id + " WHERE EX_DATE = '" + date+"' ORDER BY SET_NO DESC;";
         Cursor cursor = database.rawQuery(QRY,null);
         cursor.moveToFirst();
-        if(cursor.getCount() == 0){return 0;}
+        if(cursor.getCount() == 0){cursor.close();return 0;}
         res = cursor.getInt(0);
         cursor.close();
         return res;
@@ -187,7 +187,7 @@ public class DatabaseManager {
         String QRY = "SELECT * FROM EXC"+id+";";
         //Log.e("EEEEEEEE", QRY);
         Cursor cursor = database.rawQuery(QRY,null);
-        if(cursor.getCount() == 0){return res;}
+        if(cursor.getCount() == 0){cursor.close();return res;}
         cursor.moveToFirst();
         do{
             List<String> temp = (new ArrayList<>());
@@ -207,6 +207,7 @@ public class DatabaseManager {
         Cursor cursor = database.rawQuery(QRY,null);
         cursor.moveToFirst();
         if(cursor.getCount() == 0){
+            cursor.close();
             return;
         }
         do{
@@ -262,6 +263,7 @@ public class DatabaseManager {
         Cursor cursor = database.rawQuery("SELECT * FROM  WEIGHT WHERE REC_DATE = '" + date + "';", null);
         cursor.moveToFirst();
         if(cursor.getCount() == 0){
+            cursor.close();
             return res;
         }
         do{
@@ -282,6 +284,7 @@ public class DatabaseManager {
         Cursor cursor = database.rawQuery("SELECT * FROM  WEIGHT;", null);
         cursor.moveToFirst();
         if(cursor.getCount() == 0){
+            cursor.close();
             return res;
         }
         do{
@@ -311,7 +314,7 @@ public class DatabaseManager {
         Cursor cursor = database.rawQuery(query,args);
 
         cursor.moveToFirst();
-        if(cursor.getCount() == 0){return res;}
+        if(cursor.getCount() == 0){cursor.close();return res;}
 
         do {
             List<String> record = new ArrayList<>();
@@ -325,7 +328,19 @@ public class DatabaseManager {
         cursor.close();
         return res;
     }
-
+    public int getExerciseCountForDate(String date){
+        int res = 0;
+        List<String> exerciseTables = showTables();
+        for(String tableName: exerciseTables){
+            String qry = "SELECT COUNT(*) FROM " + tableName + " WHERE EX_DATE = '" + date + "';";
+            List<List<String>> rec = getRecords(qry, null);
+            //Log.e(tableName, rec.toString());
+            if(rec.isEmpty()){continue;}
+            if(rec.get(0).isEmpty()){continue;}
+            res += Integer.parseInt(rec.get(0).get(0));
+        }
+        return res;
+    }
 
     public void Log(String text){
         Log.e(this.getClass().getName(), text);

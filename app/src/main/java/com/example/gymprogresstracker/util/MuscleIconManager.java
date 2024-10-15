@@ -23,13 +23,14 @@ public class MuscleIconManager {
         muscleToDrawableMap.put("Biceps", R.drawable.biceps);
         muscleToDrawableMap.put("Triceps", R.drawable.triceps);
         muscleToDrawableMap.put("Calves", R.drawable.calves);
-        muscleToDrawableMap.put("Hamstring", R.drawable.hamstring);
+        muscleToDrawableMap.put("Hamstrings", R.drawable.hamstring);
         muscleToDrawableMap.put("Lats", R.drawable.lats);
         muscleToDrawableMap.put("Forearms", R.drawable.forearm);
         muscleToDrawableMap.put("Quads", R.drawable.quads);
         muscleToDrawableMap.put("Shoulder", R.drawable.shoulder);
         muscleToDrawableMap.put("Traps", R.drawable.traps);
         muscleToDrawableMap.put("Back", R.drawable.back);
+        muscleToDrawableMap.put("Glutes", R.drawable.glutes);
     }
 
     public Integer getMuscleIcon(int ID) {
@@ -39,5 +40,12 @@ public class MuscleIconManager {
             return muscleToDrawableMap.get("Biceps");
         }
         return muscleToDrawableMap.get(muscle);
+    }
+    public Integer getMuscleIconFromName(String muscleName){
+        if(!muscleToDrawableMap.containsKey(muscleName)){
+            Log.e("EEEE", "Counldnt find" + muscleName);
+            return muscleToDrawableMap.get("Biceps");
+        }
+        return muscleToDrawableMap.get(muscleName);
     }
 }

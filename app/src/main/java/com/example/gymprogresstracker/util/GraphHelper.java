@@ -2,9 +2,12 @@ package com.example.gymprogresstracker.util;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
 
 import androidx.core.content.ContextCompat;
+import androidx.core.content.res.ResourcesCompat;
 
+import com.example.gymprogresstracker.R;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
@@ -36,6 +39,7 @@ public class GraphHelper {
         lineDataSet.setValueTextColor(Color.WHITE);
         lineDataSet.setMode(LineDataSet.Mode.HORIZONTAL_BEZIER);
         lineDataSet.setLineWidth(3);
+
         //lineDataSet.setFillColor(graphColor);
         //lineDataSet.setGradientColor(Color.BLUE, Color.RED);
         lineDataSet.setFillDrawable(ContextCompat.getDrawable(context, backgroundDrawable));
@@ -58,5 +62,7 @@ public class GraphHelper {
         lineChart.setDescription(null);
         //lineChart.setBackgroundColor(Color.BLACK);
         xAxisU.setEnabled(false);
+
+
     }
 }

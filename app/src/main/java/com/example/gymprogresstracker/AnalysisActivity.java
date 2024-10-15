@@ -16,11 +16,13 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.gymprogresstracker.analysis.WorkoutAnalyzer;
+import com.example.gymprogresstracker.ui.MuscleWeeklyProgressContainer;
 import com.example.gymprogresstracker.ui.ProgressFillBar;
 import com.example.gymprogresstracker.ui.SpinnerCard;
 import com.example.gymprogresstracker.util.ExerciseDirectoryManager;
 import com.example.gymprogresstracker.util.GraphHelper;
 import com.example.gymprogresstracker.util.JSONHelper;
+import com.example.gymprogresstracker.widget.MuscleWeeklyProgressContainerManager;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
 
@@ -32,7 +34,7 @@ public class AnalysisActivity extends AppCompatActivity {
 
     Context context;
     LineChart LCProgressiveOverload, LCStrengthEfficiency, LCWeightRep, LCExerciseVolume, LCCalories, LCTonnage;
-    LinearLayout LL_PROGRESS_CONTAINER;
+    LinearLayout LL_PROGRESS_CONTAINER, LL_WEEKLY_PROGRESS_CONTAINER;
     GraphHelper graphHelper;
     ExerciseDirectoryManager exerciseDirectoryManager;
     Spinner spinner;
@@ -42,6 +44,10 @@ public class AnalysisActivity extends AppCompatActivity {
     DatabaseManager databaseManager;
     String IntentExerciseName;
     public final int WEEKLY_SET_MAX = 20;
+
+    MuscleWeeklyProgressContainer muscleWeeklyProgressContainer;
+    MuscleWeeklyProgressContainerManager muscleWeeklyProgressContainerManager;
+
     HashMap<String, ProgressFillBar> progressFillBarHashMap = new HashMap<>();
     public void init() {
         this.context = this;
@@ -54,6 +60,7 @@ public class AnalysisActivity extends AppCompatActivity {
         LCTonnage = findViewById(R.id.LC_TONNAGE);
         spinner = findViewById(R.id.SPINNER);
         LL_PROGRESS_CONTAINER = findViewById(R.id.LL_PROGRESS_CONTAINER);
+        LL_WEEKLY_PROGRESS_CONTAINER = findViewById(R.id.LL_MUSCLE_PROGRESS_CONTAINER);
 
         spinnerCard = new SpinnerCard(context, spinner);
         spinnerCardManager = new SpinnerCardManager(context, spinnerCard);
@@ -64,6 +71,9 @@ public class AnalysisActivity extends AppCompatActivity {
         exerciseDirectoryManager = new ExerciseDirectoryManager(new JSONHelper(context));
         spinnerCardManager.setExerciseDirectoryManager(exerciseDirectoryManager);
         spinnerCardManager.addOnListClickListeners(loadAnalysisOfExercise());
+        muscleWeeklyProgressContainer = new MuscleWeeklyProgressContainer(context, LL_WEEKLY_PROGRESS_CONTAINER);
+        muscleWeeklyProgressContainerManager = new MuscleWeeklyProgressContainerManager(context, muscleWeeklyProgressContainer);
+
 
         graphHelper.customizeLineChart(LCProgressiveOverload);
         graphHelper.customizeLineChart(LCStrengthEfficiency);
@@ -80,8 +90,13 @@ public class AnalysisActivity extends AppCompatActivity {
         loadProgressBars();
     }
     public void loadProgressBars(){
-        List<String> muscles = exerciseDirectoryManager.getMuscleList();
+        List<String> muscles = muscleWeeklyProgressContainerManager.getMuscleList();
         HashMap<String, Integer> muscleToWeekCount = workoutAnalyzer.getMuscleToWeekCount();
+
+        muscleWeeklyProgressContainerManager.setMuscleToValueMap(muscleToWeekCount);
+
+        muscleWeeklyProgressContainerManager.updateCards();
+        /*
         for(String muscle: muscles){
             progressFillBarHashMap.put(muscle, new ProgressFillBar(context, LL_PROGRESS_CONTAINER));
             progressFillBarHashMap.get(muscle).setMuscle(muscle);
@@ -89,6 +104,8 @@ public class AnalysisActivity extends AppCompatActivity {
             float progress = muscleToWeekCount.get(muscle)/ (float)WEEKLY_SET_MAX;
             progressFillBarHashMap.get(muscle).setProgress(progress);
         }
+
+         */
     }
     public void loadPermanentGraphs(){
         List<Entry> graphData = parseDataForGraph(workoutAnalyzer.getCalorieList());

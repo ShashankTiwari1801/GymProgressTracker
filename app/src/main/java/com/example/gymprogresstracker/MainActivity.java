@@ -16,6 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.gymprogresstracker.ui.AddExerciseButton;
 import com.example.gymprogresstracker.ui.AnalysisRowCard;
+import com.example.gymprogresstracker.ui.CalendarScroller;
 import com.example.gymprogresstracker.ui.CalorieViewerCard;
 import com.example.gymprogresstracker.ui.DailyExerciseViewer;
 import com.example.gymprogresstracker.ui.WeekRow;
@@ -25,7 +26,7 @@ import com.example.gymprogresstracker.util.JSONHelper;
 
 public class MainActivity extends AppCompatActivity {
 
-    private LinearLayout LLWeekDayRow, LLAddEx, LLContents, LLWeight;
+    private LinearLayout LLWeekDayRow, LLAddEx, LLContents, LLWeight, LLCalendar;
     ScrollView SVExerciseViewer;
     TextView TVCalView;
     DatabaseManager databaseManager;
@@ -45,12 +46,16 @@ public class MainActivity extends AppCompatActivity {
     GridLayout GL_ANALYSIS_ROW;
     AnalysisRowCard analysisRowCard;
     AnalysisRowCardManager analysisRowCardManager;
+    CalendarScroller calendarScroller;
+    CalendarScrollerManager calendarScrollerManager;
+
     public void componentsInit(){
         context = this;
         parent = findViewById(R.id.main);
         LLWeekDayRow = findViewById(R.id.LLWeekDayRow);
         LLAddEx = findViewById(R.id.LLAddExerciseBTN);
         LLContents = findViewById(R.id.LLContents);
+        LLCalendar = findViewById(R.id.LL_CALENDAR);
         TVCalView = findViewById(R.id.TVDailyCaloriesBurned);
         SVExerciseViewer = findViewById(R.id.SVExerciseViewer);
         GL_ANALYSIS_ROW = findViewById(R.id.GL_ANALYSIS_ROW);
@@ -66,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         addExerciseButton = new AddExerciseButton(context, LLAddEx);
         calorieViewerCard = new CalorieViewerCard(context, TVCalView);
         analysisRowCard = new AnalysisRowCard(context, GL_ANALYSIS_ROW);
+        calendarScroller = new CalendarScroller(context, LLCalendar);
 
         // INIT UI MANAGERS
         weekRowManager = new WeekRowManager(context, weekRow, dayUtil);
@@ -74,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
         addExerciseButtonManager = new AddExerciseButtonManager(context, addExerciseButton, dayUtil);
         calorieViewerCardManager = new CalorieViewerCardManager(context, calorieViewerCard, dayUtil, databaseManager, exerciseDirectory);
         analysisRowCardManager = new AnalysisRowCardManager(context, analysisRowCard);
+        calendarScrollerManager = new CalendarScrollerManager(context, calendarScroller);
+
     }
 
     private void INIT(){

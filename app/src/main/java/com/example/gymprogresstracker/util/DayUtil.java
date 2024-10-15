@@ -30,4 +30,5 @@ public class DayUtil {
     public String getToday() {
         return TODAY.toString();
     }
+    public LocalDate getTODAYLCDate(){return TODAY;}
 }
