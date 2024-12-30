@@ -8,6 +8,7 @@ import android.widget.ScrollView;
 THIS IS STRICTLY FOR UI INTERACTIONS
 FOR ANY LOGIC OR OTHER INTERACTIONS USE DailyExerciseViewerManager
  */
+
 public class DailyExerciseViewer {
     Context context;
     ScrollView SVExerciseViewer;

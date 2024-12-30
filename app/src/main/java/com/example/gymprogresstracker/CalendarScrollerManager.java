@@ -2,15 +2,15 @@ package com.example.gymprogresstracker;
 
 import android.content.Context;
 import android.os.CountDownTimer;
-import android.provider.ContactsContract;
 import android.util.Log;
+
+import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 
 import com.example.gymprogresstracker.ui.CalendarScroller;
 import com.example.gymprogresstracker.ui.CalendarWeekColumn;
 import com.example.gymprogresstracker.util.DayUtil;
 
-import java.time.Instant;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,9 +41,9 @@ public class CalendarScrollerManager {
 
         int today_month = dayUtil.getTODAYLCDate().getMonthValue();
         int today_year = dayUtil.getTODAYLCDate().getYear();
-        int start_month = today_month-3;
+        int start_month = today_month-11;
         int start_year = today_year;
-        if(start_month < 0){start_month = 12 + start_month; start_year--;}
+        if(start_month <= 0){start_month = 12 + start_month; start_year--;}
 
         startLocalDate = LocalDate.of(start_year, start_month, 1);
         weekData = new ArrayList<>();
@@ -54,8 +54,8 @@ public class CalendarScrollerManager {
 
             @Override
             public void onTick(long millisUntilFinished) {
-                if(i == 300){this.cancel();}
-
+                if(i == 400){this.cancel();}
+                calendarScroller.getHorizontalScrollView().fullScroll(HorizontalScrollView.FOCUS_RIGHT);
                 if(I==7){
                     I=0;
                     Log.e("WEEK DATA", weekData.toString());

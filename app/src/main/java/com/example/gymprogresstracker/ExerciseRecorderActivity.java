@@ -83,8 +83,11 @@ public class ExerciseRecorderActivity extends AppCompatActivity {
     public void initExerciseSetRecorderList() {
         LLSetList.removeAllViews();
         List<List<String>> setList = databaseManager.getSetList(exerciseID);
-        for (List<String> record : setList) {
-
+        int len = setList.size();
+        int startIndex = len - 30;
+        startIndex = Math.max(0,startIndex);
+        for(int i = startIndex; i < len ;i++){
+            List<String> record = setList.get(i);
             String date = record.get(0);
             String setNo = record.get(1);
             String weight = record.get(2);
@@ -101,6 +104,11 @@ public class ExerciseRecorderActivity extends AppCompatActivity {
             card.setOnRemoveBtnClickListener(removeSetCard(card));
 
             exerciseSetRecorderList.addSetCard(card);
+        }
+        for (List<String> record : setList) {
+            break;
+
+            //if(I++ > 30){break;}
         }
     }
 

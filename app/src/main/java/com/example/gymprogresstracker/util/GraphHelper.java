@@ -15,6 +15,7 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GraphHelper {
@@ -38,7 +39,7 @@ public class GraphHelper {
         //lineDataSet.setColor(Color.parseColor("#41FFFFFF"));
         lineDataSet.setValueTextColor(Color.WHITE);
         lineDataSet.setMode(LineDataSet.Mode.HORIZONTAL_BEZIER);
-        lineDataSet.setLineWidth(3);
+        lineDataSet.setLineWidth(2);
 
         //lineDataSet.setFillColor(graphColor);
         //lineDataSet.setGradientColor(Color.BLUE, Color.RED);
@@ -64,5 +65,14 @@ public class GraphHelper {
         xAxisU.setEnabled(false);
 
 
+    }
+
+    public List<Entry> parseDataForGraph(List<Float> data){
+        int I = 0;
+        List<Entry> res = new ArrayList<>();
+        for(Float x: data){
+            res.add(new Entry(I++, x));
+        }
+        return res;
     }
 }

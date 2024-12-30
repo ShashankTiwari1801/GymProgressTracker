@@ -5,7 +5,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import android.util.TimeUtils;
 
+import com.example.gymprogresstracker.util.TimeStampUtil;
+
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -34,6 +38,12 @@ public class DatabaseManager {
         MORNING FLOAT,
         NIGHT FLOAT
     }
+    WEIGHT_NEW{
+        ID INT AUTO INCREMENT,
+        WEIGHT FLOAT,
+        TIME STRING,
+        DATE STRING,
+    }
      */
     public class DatabaseHelper extends SQLiteOpenHelper{
 
@@ -61,10 +71,11 @@ public class DatabaseManager {
     public void init(){
         databaseHelper = new DatabaseHelper(context);
         database = databaseHelper.getWritableDatabase();
-        //addTables();
-        //showTables();
+        addTables();
+       //showTables();
         //CLEAR();
         //printTable();
+        //Log.i("TAG", "showTables: " + showTables().toString());
         getExeSetTables();
     }
     public void getExTables(){
@@ -246,9 +257,10 @@ public class DatabaseManager {
         String QRY = "CREATE TABLE IF NOT EXISTS WEIGHT(REC_DATE TEXT, MORNING FLOAT, NIGHT FLOAT);";
         database.execSQL(QRY);
     }
-    public void addWeightRecord(String date, float weight, int timeOfDay){
+    public void  addWeightRecord(String date, float weight, int timeOfDay){
         List<List<String>> record = getWeightRecord(date);
         String wght = ((timeOfDay==0)?weight:0) + ", " + ((timeOfDay==1)?weight:0);
+        String currentTime = new TimeStampUtil().getTimeStamp();
         if(record.isEmpty()){
             String QRY = "INSERT INTO WEIGHT VALUES('"+date+"'," + wght + ");";
             database.execSQL(QRY);
@@ -258,6 +270,11 @@ public class DatabaseManager {
             database.execSQL(QRY);
         }
     }
+    public void removeWeightRecord(String date){
+        String QRY = "DELETE FROM WEIGHT WHERE REC_DATE = '" + date + "';";
+        database.execSQL(QRY);
+    }
+
     public List<List<String>> getWeightRecord(String date){
         List<List<String>> res = new ArrayList<>();
         Cursor cursor = database.rawQuery("SELECT * FROM  WEIGHT WHERE REC_DATE = '" + date + "';", null);

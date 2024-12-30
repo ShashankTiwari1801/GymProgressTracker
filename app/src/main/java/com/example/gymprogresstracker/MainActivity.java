@@ -20,6 +20,7 @@ import com.example.gymprogresstracker.ui.CalendarScroller;
 import com.example.gymprogresstracker.ui.CalorieViewerCard;
 import com.example.gymprogresstracker.ui.DailyExerciseViewer;
 import com.example.gymprogresstracker.ui.WeekRow;
+import com.example.gymprogresstracker.ui.WeightActivityButton;
 import com.example.gymprogresstracker.util.DayUtil;
 import com.example.gymprogresstracker.util.ExerciseDirectoryManager;
 import com.example.gymprogresstracker.util.JSONHelper;
@@ -48,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
     AnalysisRowCardManager analysisRowCardManager;
     CalendarScroller calendarScroller;
     CalendarScrollerManager calendarScrollerManager;
-
+    WeightActivityButton weightActivityButton;
+    WeightTrackerActivityManager weightTrackerActivityManager;
     public void componentsInit(){
         context = this;
         parent = findViewById(R.id.main);
@@ -56,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
         LLAddEx = findViewById(R.id.LLAddExerciseBTN);
         LLContents = findViewById(R.id.LLContents);
         LLCalendar = findViewById(R.id.LL_CALENDAR);
+        LLWeight = findViewById(R.id.LL_WEIGHT_BTN);
+
         TVCalView = findViewById(R.id.TVDailyCaloriesBurned);
         SVExerciseViewer = findViewById(R.id.SVExerciseViewer);
         GL_ANALYSIS_ROW = findViewById(R.id.GL_ANALYSIS_ROW);
@@ -72,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         calorieViewerCard = new CalorieViewerCard(context, TVCalView);
         analysisRowCard = new AnalysisRowCard(context, GL_ANALYSIS_ROW);
         calendarScroller = new CalendarScroller(context, LLCalendar);
+        weightActivityButton = new WeightActivityButton(LLWeight);
 
         // INIT UI MANAGERS
         weekRowManager = new WeekRowManager(context, weekRow, dayUtil);
@@ -81,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         calorieViewerCardManager = new CalorieViewerCardManager(context, calorieViewerCard, dayUtil, databaseManager, exerciseDirectory);
         analysisRowCardManager = new AnalysisRowCardManager(context, analysisRowCard);
         calendarScrollerManager = new CalendarScrollerManager(context, calendarScroller);
-
+        weightTrackerActivityManager = new WeightTrackerActivityManager(context, weightActivityButton);
     }
 
     private void INIT(){

@@ -25,4 +25,7 @@ public class CalendarScroller {
     public LinearLayout getContentRoot(){
         return LLContent;
     }
+    public HorizontalScrollView getHorizontalScrollView(){
+        return horizontalScrollView;
+    }
 }

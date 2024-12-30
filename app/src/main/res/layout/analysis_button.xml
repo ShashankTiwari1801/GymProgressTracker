@@ -3,31 +3,43 @@
     android:layout_width="match_parent"
     android:orientation="horizontal"
     android:rowCount="1"
-    android:columnCount="2"
+    android:columnCount="3"
     android:id="@+id/LL_ANALYSIS_CARD"
     android:layout_height="wrap_content">
 
     <TextView
-        android:layout_width="wrap_content"
         android:layout_row="0"
         android:layout_column="0"
         android:text="Workouts"
         android:gravity="left"
-        android:layout_columnWeight="1"
+        android:layout_columnWeight="0"
         android:layout_height="wrap_content"
         android:paddingHorizontal="50sp"
         android:textSize="30sp" />
     <LinearLayout
         android:layout_row="0"
-        android:layout_columnWeight="1"
         android:gravity="center"
         android:id="@+id/LL_ANALYSIS_BTN"
-        android:paddingHorizontal="40sp"
+        android:paddingHorizontal="10sp"
+        android:layout_columnWeight="1"
         android:layout_column="1">
         <ImageView
             android:layout_width="40sp"
             android:paddingHorizontal="30sp"
             android:background="@drawable/analysis"
+            android:layout_height="40sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_row="0"
+        android:layout_columnWeight="1"
+        android:gravity="center"
+        android:id="@+id/LL_WEIGHT_BTN"
+        android:paddingHorizontal="10sp"
+        android:layout_column="2">
+        <ImageView
+            android:layout_width="40sp"
+            android:paddingHorizontal="30sp"
+            android:background="@drawable/weight"
             android:layout_height="40sp"/>
     </LinearLayout>
 

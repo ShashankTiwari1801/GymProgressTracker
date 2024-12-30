@@ -14,7 +14,6 @@ public class CalorieCalculator {
     JSONObject jsonObject;
     public float body_weight = 67f;
 
-
     public CalorieCalculator(Context context) {
         this.context = context;
         METMap.put("Chest", 3.5f);

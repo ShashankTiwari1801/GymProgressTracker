@@ -73,7 +73,7 @@ public class RenameDatabase {
             //Log.e("e", jsonObject.getJSONArray("Chest Exercises").toString());
             for (Iterator<String> it = jsonObject.keys(); it.hasNext(); ) {
                 String id = it.next();
-                jsonObject.getJSONArray(id);
+                //jsonObject.getJSONArray(id);
                 //Log.e("", String.valueOf(id)+ " | " + jsonObject.getJSONArray(id).toString());
                 NEWMAP.put( (String) jsonObject.getJSONArray(id).get(0), Integer.parseInt(id));
                 Log.e((String) jsonObject.getJSONArray(id).get(0), (String) "" + Integer.parseInt(id));
